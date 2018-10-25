@@ -1,0 +1,44 @@
+<div class="wrapper">
+  <div class="header">
+     <div class="inner-header">
+        <h1><img class='imagesearch' src="../assets/images/search2.png" [style.width.px]='50'></h1>
+     </div>
+     <div class="inner-row">
+        <div class="column">
+           <form>
+              <div class="inner-inner-row">
+                 <div class="inner-column1">
+                    <input type="text" class="form-control enter" placeholder="Search Movies"  
+                    name="movie"
+                    [(ngModel)]="movie">
+                 </div>
+                 <div class="inner-column2">
+                    <button class="button" (click)="searchMovies()"><span>Search</span></button>
+                 </div>
+              </div>
+           </form>
+        </div>
+     </div>
+  </div>
+  <section class="inner-wrapper">
+  </section>
+  <hr>
+</div>
+
+<div class="body" *ngIf="eventvalue!=0">
+  <header>
+     <div class="header-inner" *ngFor="let movie of search_result" >
+        <div class="card">
+           <div class="cardbody">
+              <img id="imagesize" src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="{{ movie.original_title }}" style="height: 460px">
+              <a routerLink="/movie/{{ movie.id }}" href="#" class="button1">Movie Details</a>
+           </div>
+        </div>
+     </div>
+  </header>
+</div>
+
+
+<wel *ngIf="eventvalue==0"></wel>
+
+

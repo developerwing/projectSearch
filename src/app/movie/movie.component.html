@@ -1,0 +1,55 @@
+
+  <div class="container">
+ 
+    <div class="table-responsive">          
+            <table class="table">
+              <thead>
+                <tr>
+                  <th colspan="6"><h5>{{ movie.title }}</h5></th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                 <tr class="row1" >
+                        <div class="left-column">
+                                <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" class="img-fluid" alt="{{ movie.title }}">
+                        </div>
+                        <div class="right-column">
+                            <ul class="group">
+                                <li class="items"><strong>Release Date: </strong> {{ movie.release_date | date:'dd-MM-yyyy' }}</li>
+                                <li class="items"><strong>Tagline: </strong> {{ movie.tagline }}</li>
+                                <li class="items"><strong>Summary: </strong> {{ movie.overview }}</li>
+                                <li class="items"><strong>Runtime: </strong> {{ movie.runtime }}</li>
+                                <li class="items"><strong>Budget:  </strong> {{ movie.budget }}</li>
+                                <li class="items">
+                                        <a href="{{ movie.homepage }}" target="_blank">
+                                          Movie Homepage
+                                        </a>
+                                        <a href="https://www.imdb.com/title/{{ movie.imdb_id }}" target="_blank" class="button">
+                                          IMDB Link
+                                        </a>
+                                </li>
+                            </ul>
+                               
+                                
+                        </div>
+                 </tr> 
+               
+              </tbody>
+            </table>
+            </div>
+    
+   
+   
+    <!-- Right Column -->
+    
+</div>
+
+
+
+
+
+
+
+
+
